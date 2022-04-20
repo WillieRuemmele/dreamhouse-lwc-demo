@@ -7,10 +7,6 @@ public with sharing class GeocodingService {
     ) {
         List<Coordinates> computedCoordinates = new List<Coordinates>();
 
-        // remove from here
-        string name = redundantClass.name();
-        // to here
-
         for (GeocodingAddress address : addresses) {
             String geocodingUrl = BASE_URL;
             geocodingUrl += (String.isNotBlank(address.street))
